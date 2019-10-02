@@ -333,7 +333,7 @@ public class BiometricPrompt implements BiometricConstants {
                                 mBiometricFragment.cleanup();
                             } else {
                                 CharSequence errorText =
-                                        mFingerprintDialogFragment.getNegativeButtonText();
+                                        mFingerprintDialogFragment != null ? mFingerprintDialogFragment.getNegativeButtonText() : null;
                                 mAuthenticationCallback.onAuthenticationError(
                                         ERROR_NEGATIVE_BUTTON,
                                         errorText);
