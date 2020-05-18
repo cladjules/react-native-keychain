@@ -151,9 +151,9 @@ public class KeychainModule extends ReactContextBaseJavaModule {
     final KeychainModule instance = new KeychainModule(reactContext);
 
     // force initialization of the crypto api in background thread
-    final Thread warmingUp = new Thread(instance::internalWarmingBestCipher, "keychain-warming-up");
-    warmingUp.setDaemon(true);
-    warmingUp.start();
+    // final Thread warmingUp = new Thread(instance::internalWarmingBestCipher, "keychain-warming-up");
+    // warmingUp.setDaemon(true);
+    // warmingUp.start();
 
     return instance;
   }
